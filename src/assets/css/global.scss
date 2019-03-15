@@ -1,0 +1,30 @@
+// color
+$baseColor1: #94c5db;
+
+/* 省略号 */
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 箭头 */
+.arrows {
+  position: relative;
+  padding-right: 20px;
+  &::after {
+    position: absolute;
+    content: '';
+    border: 4px solid transparent;
+    top: 50%;
+    right: 0;
+    transform: translate(-5px, -50%);
+  }
+}
+
+.arrows-btm {
+  @extend .arrows;
+  &::after {
+    border-top-color: inherit;
+  }
+}
