@@ -8,6 +8,7 @@
         </li>
       </ul>
     </div>
+
     <div class="header-user">
       <span class="header-username">{{ user.name }}</span>
       <img class="header-avatar" :src="user.avatar" :alt="user.name">

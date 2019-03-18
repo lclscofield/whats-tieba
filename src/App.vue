@@ -27,6 +27,7 @@ export default class App extends Vue {
   font-family: Georgia, "Microsoft YaHei", "STXihei", monospace;
   color: #2c3e50;
   height: 100vh;
+  min-width: 1200px;
 
   > .main {
     height: calc(100% - 60px);
