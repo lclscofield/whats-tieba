@@ -11,6 +11,11 @@
     <div class="header-user">
       <span class="header-username">{{ user.name }}</span>
       <img class="header-avatar" :src="user.avatar" :alt="user.name">
+      <ul class="header-user-popup">
+        <li class="user-home">个人中心</li>
+        <li class="setting">设置</li>
+        <li class="exit">退出</li>
+      </ul>
     </div>
   </div>
 </template>
@@ -59,7 +64,6 @@ export default class HeaderHome extends Vue {
   > .header-navi {
     position: relative;
     cursor: pointer;
-
     &:hover {
       > .header-navi-popup {
         display: block;
@@ -91,6 +95,12 @@ export default class HeaderHome extends Vue {
   > .header-user {
     display: flex;
     align-items: center;
+    position: relative;
+    &:hover {
+      > .header-user-popup {
+        display: block;
+      }
+    }
 
     > .header-username {
       padding-right: 10px;
@@ -102,6 +112,26 @@ export default class HeaderHome extends Vue {
       padding: 5px;
       border: 1px solid $baseColor1;
       border-radius: 100%;
+    }
+
+    > .header-user-popup {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background: #ffffff;
+      font-size: 14px;
+      box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+      > li {
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        padding-left: 10px;
+        cursor: pointer;
+        &:hover {
+          background: $baseColor1;
+        }
+      }
     }
   }
 }
