@@ -66,18 +66,21 @@ export default class HeaderHome extends Vue {
     cursor: pointer;
     &:hover {
       > .header-navi-popup {
-        display: block;
+        visibility: visible;
+        opacity: 1;
       }
     }
 
     > .header-navi-popup {
-      display: none;
+      visibility: hidden;
+      opacity: 0;
       position: absolute;
-      top: 60px;
+      top: 100%;
       left: 0;
       background: #ffffff;
       font-size: 14px;
       box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+      transition: all 0.3s;
 
       > .header-navi-option {
         width: 150px;
@@ -85,6 +88,7 @@ export default class HeaderHome extends Vue {
         line-height: 30px;
         padding-left: 10px;
         cursor: pointer;
+        transition: all 0.3s;
         &:hover {
           background: $baseColor1;
         }
@@ -98,7 +102,8 @@ export default class HeaderHome extends Vue {
     position: relative;
     &:hover {
       > .header-user-popup {
-        display: block;
+        visibility: visible;
+        opacity: 1;
       }
     }
 
@@ -107,27 +112,31 @@ export default class HeaderHome extends Vue {
     }
 
     > .header-avatar {
-      width: 30px;
-      height: 30px;
-      padding: 5px;
+      width: 40px;
+      height: 40px;
+      padding: 4px;
       border: 1px solid $baseColor1;
       border-radius: 100%;
     }
 
     > .header-user-popup {
-      display: none;
+      visibility: hidden;
+      opacity: 0;
       position: absolute;
-      top: 60px;
+      top: 100%;
       right: 0;
       background: #ffffff;
       font-size: 14px;
       box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+      transition: all 0.3s;
+
       > li {
         width: 100px;
         height: 30px;
         line-height: 30px;
         padding-left: 10px;
         cursor: pointer;
+        transition: all 0.3s;
         &:hover {
           background: $baseColor1;
         }
