@@ -39,14 +39,14 @@
 import { Component, Vue } from 'vue-property-decorator'
 
 interface Tieba {
-  title: String,
-  img: String
+  title: string,
+  img: string
 }
 
 @Component
 export default class Home extends Vue {
   // data
-  myTieba: String[] = ['hasdhas', 'oiseuhwjalsd', 'jasjdhiuwqbd', 'auishdueqwbeh', 'ashdahgsduyagsu']
+  myTieba: string[] = ['hasdhas', 'oiseuhwjalsd', 'jasjdhiuwqbd', 'auishdueqwbeh', 'ashdahgsduyagsu']
   hotTieba: Tieba[] = [{
     title: '呵呵呵',
     img: 'http://res.pokemon.name/common/pokemon/pgl/054.00.png'

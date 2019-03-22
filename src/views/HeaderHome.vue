@@ -23,18 +23,25 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import {
+  namespace
+} from 'vuex-class'
+
+const common = namespace('common')
 
 interface NaviOption {
-  title: String,
-  baId: String
+  title: string,
+  baId: string
 }
 interface User {
-  name: String,
-  avatar: String
+  name: string,
+  avatar: string
 }
 
 @Component
 export default class HeaderHome extends Vue {
+  @common.State('haha') haha: any
+  @common.Action('setx') setx: any
   // data
   navi: NaviOption[] = [{
     title: 'hehehe吧',
@@ -47,7 +54,15 @@ export default class HeaderHome extends Vue {
     name: 'lclscofield',
     avatar: 'http://res.pokemon.name/common/pokemon/pgl/054.00.png'
   }
-  currentBa: String = 'hehehe吧'
+  currentBa: string = 'hehehe吧'
+
+  // gouzi
+  created () {
+    console.log(this.haha)
+    this.setx({
+      query: 'sss'
+    })
+  }
 }
 </script>
 
