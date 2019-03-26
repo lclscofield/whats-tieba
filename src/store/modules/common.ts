@@ -11,7 +11,7 @@ const actions: any = {
   async setx({ commit: Commit }: any, param: object): Promise<object> {
     const httpConfig = {
       method: 'post',
-      url: '/api/query',
+      url: '/api/users',
       data: param
     }
     const res: any = await http(httpConfig)

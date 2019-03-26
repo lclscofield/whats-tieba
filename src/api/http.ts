@@ -23,22 +23,9 @@ const http = async (httpConfig: object): Promise<object> => {
       timeout: 10000,
       ...httpConfig
     })
+    return res.data
   } catch (err) {
-    console.log('http-server error', err)
     throw new Error(err)
-  }
-  if (res && res.status >= 200 && res.status < 400) {
-    if (res.data.success) {
-      return res.data
-    } else {
-      // 是否需要显示错误提示
-      if (res.data.errorCode < 100 || res.data.errorCode > 200) {
-        console.log(res.data.errorMsg)
-      }
-      throw new Error('请求失败')
-    }
-  } else {
-    throw new Error('请求失败')
   }
 }
 

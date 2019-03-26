@@ -5,6 +5,5 @@
  */
 module.exports = app => {
   const { router, controller } = app;
-  router.get('/api/initCsrf', controller.home.initCsrf);
-  router.post('/api/query', controller.home.index);
+  router.resources('users', '/api/users', controller.users);
 };
