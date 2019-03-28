@@ -20,10 +20,15 @@ module.exports = appInfo => {
 
   // add your user config here
   const userConfig = {
-    // myAppName: 'egg',
     security: {
       csrf: {
         ignoreJSON: true,
+      },
+    },
+    mongoose: {
+      client: {
+        url: 'mongodb://127.0.0.1/tieba',
+        options: {},
       },
     },
   };
