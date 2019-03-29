@@ -9,6 +9,7 @@ module.exports = app => {
       userId: String,
       username: String,
       password: String,
+      salt: String,
       userImgUrl: String,
       phone: {
         type: String,
